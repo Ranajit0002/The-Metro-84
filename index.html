@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Metro 1984 | Timeless Taste on Track</title>
+
+    <!-- Preconnect to external domains for faster DNS resolution -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts with display=swap to prevent render blocking -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Corrected Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        beige: '#FDFBF7',
+                        'beige-light': '#FFFFFF',
+                        'beige-mid': '#F8F3E8',
+                        'beige-dark': '#EFE4D0',
+                        'beige-accent': '#32281E',
+                        gold: '#C89B3C',
+                        'gold-light': '#F5E3B3',
+                        'gold-bright': '#E5A93C',
+                        'gold-dark': '#96691E',
+                        'flash-red': '#B91C1C',
+                        'flash-red-hover': '#991B1B',
+                        'flash-red-light': '#FEF2F2',
+                        veg: '#2D8A4E',
+                        nonveg: '#B91C1C'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' }
+                        },
+                        angledGlow: {
+                            '0%': { transform: 'translateX(-150%) rotate(45deg)' },
+                            '50%': { transform: 'translateX(250%) rotate(45deg)' },
+                            '100%': { transform: 'translateX(250%) rotate(45deg)' }
+                        }
+                    },
+                    animation: {
+                        'marquee-infinite': 'marquee 28s linear infinite',
+                        'angled-glow': 'angledGlow 6s infinite ease-in-out',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-beige text-beige-accent font-sans antialiased selection:bg-gold selection:text-white flex flex-col min-h-full overflow-x-hidden">
+
+<!-- 1. TOP ANNOUNCEMENT BAR -->
+    <div id="top-bar"
+        class="h-9 sm:h-10 bg-beige-accent text-gold-light px-2 sm:px-4 text-xs sm:text-sm font-medium sticky top-0 z-50 shadow-md flex items-center">
+        <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
+            
+            <!-- Left Fixed Tag -->
+            <div class="flex items-center gap-1.5 flex-shrink-0 z-20 bg-beige-accent pr-2">
+                <span
+                    class="red-btn-gradient text-white font-extrabold text-[10px] sm:text-xs uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm tracking-wide animate-pulse">
+                    <span>🔥</span> OFFERS
+                </span>
+            </div>
+
+            <!-- Marquee Area with Mask & Fade Blur Effect -->
+            <div class="overflow-hidden relative w-full flex items-center [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+                
+                <!-- Left/Right Soft Glow & Edge Blurs -->
+                <div class="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-beige-accent to-transparent z-10 pointer-events-none backdrop-blur-[1px]"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-beige-accent to-transparent z-10 pointer-events-none backdrop-blur-[1px]"></div>
+
+                <!-- Scrolling Marquee Content Track 1 -->
+                <div
+                    class="flex whitespace-nowrap animate-marquee-infinite marquee-inner items-center text-xs sm:text-sm text-gold-light/90">
+                    <span class="mx-4 sm:mx-6 flex items-center gap-2">🌟 Welcome to <strong
+                            class="text-gold-bright">The Metro 1984</strong> &mdash; Timeless Taste on Track!</span>
+                    <span class="text-gold/40">&bull;</span>
+                    <span class="mx-4 sm:mx-6">🍱 Mahabhoj Veg Thali @ <strong class="text-gold-bright">&#8377;249</strong>
+                        only!</span>
+                    <span class="text-gold/40">&bull;</span>
+                    <span class="mx-4 sm:mx-6">🍗 Authentic Kolkata Chicken Biryani starting @ <strong
+                            class="text-gold-bright">&#8377;220</strong>!</span>
+                    <span class="text-gold/40">&bull;</span>
+                    <span class="mx-4 sm:mx-6">🎁 Flat 10% OFF on Orders above &#8377;500! Code: <strong
+                            class="text-flash-red bg-gold-light px-1.5 py-0.5 rounded font-extrabold">METRO10</strong></span>
+                    <span class="text-gold/40">&bull;</span>
+                </div>
+
+                <!-- Scrolling Marquee Content Track 2 (Duplicate for Infinite Loop) -->
+                <div class="flex whitespace-nowrap animate-marquee-infinite marquee-inner items-center text-xs sm:text-sm text-gold-light/90"
+                    aria-hidden="true">
+                    <span class="mx-4 sm:mx-6 flex items-center gap-2">🌟 Welcome to <strong
+                            class="text-gold-bright">The Metro 1984</strong> &mdash; Timeless Taste on Track!</span>
+                    <span class="text-gold/40">&bull;</span>
+                    <span class="mx-4 sm:mx-6">🍱 Mahabhoj Veg Thali @ <strong class="text-gold-bright">&#8377;249</strong>
+                        only!</span>
+                    <span class="text-gold/40">&bull;</span>
+                    <span class="mx-4 sm:mx-6">🍗 Authentic Kolkata Chicken Biryani starting @ <strong
+                            class="text-gold-bright">&#8377;220</strong>!</span>
+                    <span class="text-gold/40">&bull;</span>
+                    <span class="mx-4 sm:mx-6">🎁 Flat 10% OFF on Orders above &#8377;500! Code: <strong
+                            class="text-flash-red bg-gold-light px-1.5 py-0.5 rounded font-extrabold">METRO10</strong></span>
+                    <span class="text-gold/40">&bull;</span>
+                </div>
+
+            </div>
+
+            <!-- Right Fixed Contact Links -->
+            <div
+                class="hidden xl:flex items-center gap-4 text-xs sm:text-sm text-gold-light/90 flex-shrink-0 z-20 bg-beige-accent pl-3 whitespace-nowrap">
+                <a href="#location" class="hover:text-gold-bright transition flex items-center gap-1">
+                    📍 Opp. IIT Indore Gate 01
+                </a>
+                <a href="tel:+919876543210"
+                    class="hover:text-gold-bright transition flex items-center gap-1 font-bold text-gold-bright">
+                    📞 +91 98765 43210
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header
+        class="h-16 bg-beige-mid/50 text-beige-accent sticky top-9 sm:top-10 z-40 backdrop-blur-sm flex items-center">
+        <div class="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-full gap-2">
+
+                <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0 min-w-0">
+                    <div
+                        class="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full p-0.5 bg-beige-accent flex items-center justify-center overflow-hidden flex-shrink-0">
+                        <img src="./assets/images/logo.png" alt="The Metro 1984 logo"
+                            class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <div class="flex flex-col truncate max-w-[130px] xs:max-w-[180px] sm:max-w-none">
+                        <span
+                            class="font-serif font-bold text-base sm:text-xl tracking-wider gold-gradient-text truncate">
+                            THE METRO 1984
+                        </span>
+                        <span
+                            class="text-[9px] sm:text-xs tracking-widest text-gold-dark font-semibold uppercase truncate">
+                            Timeless Taste on Track
+                        </span>
+                    </div>
+                </a>
+
+                <nav class="hidden xl:flex items-center gap-5 2xl:gap-8 text-sm font-bold text-beige-accent">
+                    <a href="#hero" class="hover:text-gold transition-colors whitespace-nowrap">Home</a>
+                    <a href="#famous" class="hover:text-gold transition-colors whitespace-nowrap">Famous Items</a>
+                    <a href="#about" class="hover:text-gold transition-colors whitespace-nowrap">About Us</a>
+                    <a href="#menu" class="hover:text-gold transition-colors whitespace-nowrap">Menu</a>
+                    <a href="#combos" class="hover:text-gold transition-colors whitespace-nowrap">Combos &
+                        Thalis</a>
+                    <a href="#testimonials" class="hover:text-gold transition-colors whitespace-nowrap">Reviews</a>
+                </nav>
+
+                <div class="hidden sm:flex items-center gap-2 lg:gap-3.5 flex-shrink-0">
+
+                    <!-- BORDERLESS TOGGLE PILL -->
+                    <div
+                        class="bg-beige-dark/50 p-1 rounded-full flex items-center gap-0.5 text-xs sm:text-sm font-bold shadow-inner">
+                        <button id="toggle-all" onclick="setDietFilter('all')"
+                            class="px-3 py-1 sm:px-3.5 sm:py-1 rounded-full transition-all duration-200 gold-btn-gradient text-white font-extrabold shadow-sm">All</button>
+                        <button id="toggle-veg" onclick="setDietFilter('veg')"
+                            class="px-3 py-1 sm:px-3.5 sm:py-1 rounded-full transition-all duration-200 text-beige-accent hover:text-veg flex items-center gap-1">Veg</button>
+                        <button id="toggle-nonveg" onclick="setDietFilter('nonveg')"
+                            class="px-3 py-1 sm:px-3.5 sm:py-1 rounded-full transition-all duration-200 text-beige-accent hover:text-flash-red flex items-center gap-1">Non-Veg</button>
+                    </div>
+
+                    <button onclick="openBookingModal()"
+                        class="red-btn-gradient hover:opacity-90 text-white font-extrabold text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-full uppercase tracking-wider shadow-md hover:scale-105 transition transform whitespace-nowrap">
+                        Book Table
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-2 xl:hidden">
+                    <button id="mobile-menu-btn" type="button"
+                        class="text-gold-dark p-2 rounded-xl bg-transparent hover:bg-beige-dark/40 focus:outline-none"
+                        aria-label="Open Menu">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 pointer-events-none" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div id="mobile-drawer-backdrop"
+        class="fixed inset-0 bg-beige-accent/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    </div>
+
+    <aside id="mobile-drawer"
+        class="fixed top-0 right-0 w-72 max-w-[85vw] h-full bg-beige text-beige-accent z-50 shadow-2xl transform translate-x-full drawer-slide flex flex-col justify-between">
+        <div class="p-4 flex items-center justify-between bg-beige-mid shadow-sm">
+            <span class="font-serif font-bold gold-gradient-text text-base sm:text-lg truncate">THE METRO 1984</span>
+            <button id="mobile-drawer-close" type="button"
+                class="text-gold-dark p-1.5 rounded-lg bg-transparent hover:bg-beige-dark" aria-label="Close Menu">
+                <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="p-4 sm:p-5 overflow-y-auto space-y-4 sm:space-y-5 flex-grow">
+            <div
+                class="bg-beige-dark/50 p-1 rounded-xl flex items-center justify-around text-xs sm:text-sm font-bold shadow-inner">
+                <button id="m-toggle-all" onclick="setDietFilter('all')"
+                    class="w-full py-1.5 sm:py-2 rounded-lg text-center gold-btn-gradient text-white font-extrabold">All</button>
+                <button id="m-toggle-veg" onclick="setDietFilter('veg')"
+                    class="w-full py-1.5 sm:py-2 rounded-lg text-center text-veg">🌱 Veg</button>
+                <button id="m-toggle-nonveg" onclick="setDietFilter('nonveg')"
+                    class="w-full py-1.5 sm:py-2 rounded-lg text-center text-flash-red">🍗 Non-Veg</button>
+            </div>
+
+            <nav class="flex flex-col space-y-2.5 sm:space-y-3 text-sm sm:text-base font-semibold">
+                <a href="#hero" class="drawer-link hover:text-gold py-1">Home</a>
+                <a href="#famous" class="drawer-link hover:text-gold py-1">Famous Items</a>
+                <a href="#about" class="drawer-link hover:text-gold py-1">About Us</a>
+                <a href="#menu" class="drawer-link hover:text-gold py-1">Full Menu</a>
+                <a href="#combos" class="drawer-link hover:text-gold py-1">Combos & Thalis</a>
+                <a href="#testimonials" class="drawer-link hover:text-gold py-1">Reviews</a>
+            </nav>
+        </div>
+
+        <div class="p-4 bg-beige-mid/80 space-y-2.5">
+            <button onclick="triggerSurpriseCraving(); closeMobileDrawer();"
+                class="w-full bg-gold/15 hover:bg-gold/25 text-gold-dark font-extrabold py-2.5 rounded-xl text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                <span>🎰</span> Surprise Craving!
+            </button>
+            <button onclick="closeMobileDrawer(); openBookingModal();"
+                class="w-full block text-center red-btn-gradient text-white font-extrabold py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider shadow">
+                Book Table Now
+            </button>
+        </div>
+    </aside>
+
+    <!-- 3. HERO BANNER -->
+    <section id="hero"
+        class="relative bg-beige-mid text-beige-accent overflow-hidden px-0 py-10 sm:py-14 lg:py-0 lg:min-h-[580px] lg:h-[calc(100vh-104px)] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <div id="hero-bg-1" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-25"
+                style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80');">
+            </div>
+            <div id="hero-bg-2" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
+                style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');">
+            </div>
+            <div id="hero-bg-3" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
+                style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80');">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-beige-mid/50 via-beige/5 to-beige-mid/50"></div>
+        </div>
+
+        <div class="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-full">
+                <div class="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left min-w-0">
+                    <div
+                        class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gold/15 text-gold-dark text-xs sm:text-sm font-bold tracking-wider uppercase backdrop-blur-sm">
+                        <span>✨</span> Multi-Cuisine Destination
+                    </div>
+
+                    <h1
+                        class="font-serif text-3xl xs:text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-beige-accent">
+                        Experience <span class="gold-gradient-text">Timeless Taste</span> On Track.
+                    </h1>
+
+                    <p
+                        class="text-beige-accent/80 text-sm sm:text-base lg:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Step into an extraordinary dining atmosphere. Authentic Bengali Mahabhoj Thalis, Kolkata
+                        Biryanis, Tandoori Kebabs, Indo-Chinese, and Clean Fitness Bowls.
+                    </p>
+
+                    <div class="pt-2 max-w-md mx-auto lg:mx-0">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                            <a href="#menu"
+                                class="w-full gold-btn-gradient hover:opacity-90 text-white font-extrabold px-5 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-wider shadow-md hover:scale-[1.02] transition transform text-center truncate">
+                                Explore Full Menu
+                            </a>
+                            <button onclick="triggerSurpriseCraving()"
+                                class="w-full bg-beige-light hover:bg-beige text-gold-dark font-extrabold px-4 py-3.5 rounded-full text-xs sm:text-sm tracking-wider uppercase transition flex items-center justify-center gap-1.5 truncate shadow-sm">
+                                <span>🎰</span> Surprise Craving
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 min-w-0">
+                    <div
+                        class="glow-card-container card-gradient-gold p-4 sm:p-5 rounded-3xl shadow-xl space-y-3 max-w-md mx-auto lg:max-w-none">
+                        <div class="relative h-48 sm:h-56 lg:h-60 rounded-2xl overflow-hidden bg-beige">
+                            <img id="banner-card-img"
+                                src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80"
+                                alt="Featured Dish" class="w-full h-full object-cover transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/40 via-transparent to-transparent">
+                            </div>
+                            <span id="banner-card-diet"
+                                class="absolute top-3 left-3 bg-veg text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full uppercase shadow-md">🌱
+                                Pure Veg</span>
+                            <div
+                                class="absolute bottom-3 right-3 bg-beige-light text-flash-red font-serif font-extrabold text-lg sm:text-xl px-3.5 py-1 rounded-full shadow-lg">
+                                ₹<span id="banner-card-price">249</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <div class="flex justify-between items-center text-xs sm:text-sm">
+                                <span id="banner-card-category"
+                                    class="text-gold-dark uppercase font-extrabold tracking-widest text-[10px] sm:text-xs">Grand
+                                    Signature</span>
+                                <span class="text-gold-bright font-bold text-xs sm:text-sm flex items-center gap-1">⭐
+                                    4.9 Rating</span>
+                            </div>
+                            <h3 id="banner-card-title"
+                                class="font-serif font-bold text-lg sm:text-xl text-beige-accent truncate">Mahabhoj Veg
+                                Thali</h3>
+                            <p id="banner-card-desc"
+                                class="text-xs sm:text-sm text-beige-accent/75 line-clamp-2 font-light">
+                                Plain Rice, Dal, 2 Sabji, Bhaja, Salad, Papad & Payesh.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2 border-t border-gold/15 text-xs sm:text-sm">
+                            <div class="flex items-center gap-2" id="banner-slider-dots">
+                                <button onclick="setBannerSlide(0)"
+                                    class="banner-dot w-3 h-3 rounded-full bg-gold transition-all duration-300 transform scale-110 focus:outline-none"
+                                    aria-label="Slide 1"></button>
+                                <button onclick="setBannerSlide(1)"
+                                    class="banner-dot w-2.5 h-2.5 rounded-full bg-gold/30 hover:bg-gold/60 transition-all duration-300 focus:outline-none"
+                                    aria-label="Slide 2"></button>
+                                <button onclick="setBannerSlide(2)"
+                                    class="banner-dot w-2.5 h-2.5 rounded-full bg-gold/30 hover:bg-gold/60 transition-all duration-300 focus:outline-none"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <a href="#menu"
+                                class="text-flash-red hover:text-flash-red-hover font-extrabold text-xs sm:text-sm flex items-center gap-1 whitespace-nowrap">
+                                Order This Dish ➔
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FAMOUS ITEMS SECTION -->
+    <section id="famous" class="py-12 sm:py-16 lg:py-20 bg-beige">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+                <span class="text-gold-dark font-extrabold text-xs sm:text-sm uppercase tracking-widest">Atmosphere &
+                    Flavor</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-beige-accent mt-1">Our Iconic Specialties</h2>
+                <p class="text-xs sm:text-base text-beige-accent/70 mt-1.5 sm:mt-2 font-light">Crafted with handpicked
+                    ingredients and authentic family recipes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div
+                    class="glow-card-container card-gradient-gold rounded-3xl p-5 shadow-sm hover:shadow-xl transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-44 sm:h-48 rounded-2xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80"
+                                alt="Kolkata Chicken Biryani"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/30 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-2.5 right-2.5 bg-nonveg text-white text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full uppercase shadow-md">Non-Veg</span>
+                        </div>
+                        <span
+                            class="text-[10px] sm:text-xs font-extrabold text-gold-dark uppercase tracking-widest">Heritage
+                            Recipe</span>
+                        <h3 class="font-serif font-bold text-lg sm:text-xl text-beige-accent mt-0.5">Kolkata Special
+                            Chicken Biryani</h3>
+                        <p class="text-xs sm:text-sm text-beige-accent/80 mt-1 line-clamp-2 font-light">Fragrant basmati
+                            rice cooked with chicken, slow-cooked potato, and boiled egg.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gold/15 flex items-center justify-between">
+                        <span class="font-serif font-extrabold text-flash-red text-base sm:text-lg">₹289</span>
+                        <a href="#menu"
+                            class="text-xs sm:text-sm text-gold-dark font-extrabold hover:underline whitespace-nowrap">Order
+                            Now ➔</a>
+                    </div>
+                </div>
+
+                <div
+                    class="glow-card-container card-gradient-gold rounded-3xl p-5 shadow-sm hover:shadow-xl transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-44 sm:h-48 rounded-2xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80"
+                                alt="Mahabhoj Veg Thali"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/30 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-2.5 right-2.5 bg-veg text-white text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full uppercase shadow-md">Pure
+                                Veg</span>
+                        </div>
+                        <span
+                            class="text-[10px] sm:text-xs font-extrabold text-gold-dark uppercase tracking-widest">Grand
+                            Thali</span>
+                        <h3 class="font-serif font-bold text-lg sm:text-xl text-beige-accent mt-0.5">Mahabhoj Veg Thali
+                        </h3>
+                        <p class="text-xs sm:text-sm text-beige-accent/80 mt-1 line-clamp-2 font-light">Authentic 9-item
+                            Bengali feast with fresh Paneer curry, Dal, Bhaja, Chutney, Papad & Payesh.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gold/15 flex items-center justify-between">
+                        <span class="font-serif font-extrabold text-flash-red text-base sm:text-lg">₹249</span>
+                        <a href="#menu"
+                            class="text-xs sm:text-sm text-gold-dark font-extrabold hover:underline whitespace-nowrap">Order
+                            Now ➔</a>
+                    </div>
+                </div>
+
+                <div
+                    class="glow-card-container card-gradient-gold rounded-3xl p-5 shadow-sm hover:shadow-xl transition duration-300 group flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="relative h-44 sm:h-48 rounded-2xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80"
+                                alt="Reshmi Chicken Tikka"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/30 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-2.5 right-2.5 bg-nonveg text-white text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full uppercase shadow-md">Tandoori</span>
+                        </div>
+                        <span
+                            class="text-[10px] sm:text-xs font-extrabold text-gold-dark uppercase tracking-widest">Sizzling
+                            Kebabs</span>
+                        <h3 class="font-serif font-bold text-lg sm:text-xl text-beige-accent mt-0.5">Reshmi Chicken
+                            Tikka</h3>
+                        <p class="text-xs sm:text-sm text-beige-accent/80 mt-1 line-clamp-2 font-light">Chicken
+                            marinated in cashew paste and charcoal grilled to perfection.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gold/15 flex items-center justify-between">
+                        <span class="font-serif font-extrabold text-flash-red text-base sm:text-lg">₹219</span>
+                        <a href="#menu"
+                            class="text-xs sm:text-sm text-gold-dark font-extrabold hover:underline whitespace-nowrap">Order
+                            Now ➔</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ABOUT US SECTION -->
+    <section id="about" class="py-12 sm:py-16 lg:py-20 bg-beige-mid">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 min-w-0">
+                    <div class="rounded-3xl overflow-hidden h-48 sm:h-64 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                            alt="Dining Ambience" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-3xl overflow-hidden h-48 sm:h-64 mt-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+                            alt="Kitchen Prep" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-4 min-w-0">
+                    <span class="text-gold-dark font-extrabold text-xs sm:text-sm uppercase tracking-widest">Our
+                        Story</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold leading-tight text-beige-accent">About <span
+                            class="gold-gradient-text">The Metro 1984</span></h2>
+                    <p class="text-xs sm:text-base text-beige-accent/85 leading-relaxed font-light">
+                        Located right opposite IIT Indore Gate No. 01, <strong>The Metro 1984</strong> brings together
+                        multi-cuisine culinary heritage with modern hospitality.
+                    </p>
+                    <p class="text-xs sm:text-base text-beige-accent/85 leading-relaxed font-light">
+                        From authentic Bengali Thalis and Kolkata Biryanis to Indo-Chinese, pizzas, and clean fitness
+                        bowls, every item is prepared fresh.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-4 border-t border-gold/15 text-center">
+                        <div>
+                            <div class="font-serif font-extrabold text-xl sm:text-3xl text-flash-red">100%</div>
+                            <div class="text-[10px] sm:text-xs text-beige-accent/70 uppercase font-semibold">Fresh
+                                Quality</div>
+                        </div>
+                        <div>
+                            <div class="font-serif font-extrabold text-xl sm:text-3xl text-gold-dark">Multi</div>
+                            <div class="text-[10px] sm:text-xs text-beige-accent/70 uppercase font-semibold">Cuisine
+                                Menu</div>
+                        </div>
+                        <div>
+                            <div class="font-serif font-extrabold text-xl sm:text-3xl text-flash-red">Hygiene</div>
+                            <div class="text-[10px] sm:text-xs text-beige-accent/70 uppercase font-semibold">Certified
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FULL MENU GRID SECTION -->
+    <section id="menu" class="py-12 sm:py-16 lg:py-20 bg-beige">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-gold-dark font-extrabold text-xs sm:text-sm uppercase tracking-widest">Full
+                        Menu</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-beige-accent mt-1">Explore Dishes</h2>
+                </div>
+
+                <div class="relative w-full md:w-80 flex-shrink-0">
+                    <input type="text" id="menu-search" placeholder="Search dish or ingredient..."
+                        class="w-full bg-beige-light text-beige-accent rounded-full py-2.5 px-4 pl-9 text-xs sm:text-sm focus:outline-none shadow-sm">
+                    <span class="absolute left-3.5 top-3 text-gold-dark/60 text-xs sm:text-sm">🔍</span>
+                </div>
+            </div>
+
+            <!-- Sticky Category Filter Bar -->
+            <div
+                class="sticky top-25 sm:top-26 z-30 bg-beige/95 backdrop-blur-md py-3 mb-8 border-y border-gold/15 overflow-x-auto no-scrollbar">
+                <div class="flex items-center gap-2 min-w-max" id="category-tabs">
+                    <button onclick="filterCategory('all')"
+                        class="cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold gold-btn-gradient text-white shadow-sm whitespace-nowrap">All
+                        Items</button>
+                    <button onclick="filterCategory('starters')"
+                        class="cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-beige-light text-beige-accent hover:bg-beige-dark/30 whitespace-nowrap">Momos
+                        & Rolls</button>
+                    <button onclick="filterCategory('tandoori')"
+                        class="cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-beige-light text-beige-accent hover:bg-beige-dark/30 whitespace-nowrap">Tandoori
+                        & Kebabs</button>
+                    <button onclick="filterCategory('mains')"
+                        class="cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-beige-light text-beige-accent hover:bg-beige-dark/30 whitespace-nowrap">Biryani
+                        & Curries</button>
+                    <button onclick="filterCategory('chinese')"
+                        class="cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-beige-light text-beige-accent hover:bg-beige-dark/30 whitespace-nowrap">Chinese
+                        Specials</button>
+                    <button onclick="filterCategory('pizza-pasta')"
+                        class="cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-beige-light text-beige-accent hover:bg-beige-dark/30 whitespace-nowrap">Pizza
+                        & Pasta</button>
+                    <button onclick="filterCategory('fitness')"
+                        class="cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-beige-light text-beige-accent hover:bg-beige-dark/30 whitespace-nowrap">Fitness
+                        Corner</button>
+                </div>
+            </div>
+
+            <!-- Dish Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="menu-grid">
+
+                <div class="dish-card glow-card-container card-gradient-gold rounded-3xl p-4 shadow-sm hover:shadow-xl transition group flex flex-col justify-between"
+                    data-category="starters" data-diet="veg">
+                    <div>
+                        <div class="relative h-44 rounded-2xl overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=500&q=80"
+                                alt="Paneer Tikka" class="w-full h-full object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/30 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-2 left-2 bg-veg text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shadow">Pure
+                                Veg</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-2 mb-1">
+                            <h3
+                                class="dish-title font-serif font-bold text-base sm:text-lg text-beige-accent group-hover:text-gold-dark transition">
+                                Paneer Tikka</h3>
+                            <span
+                                class="font-serif font-extrabold text-base sm:text-lg text-flash-red flex-shrink-0">₹199</span>
+                        </div>
+                        <p class="dish-desc text-xs sm:text-sm text-beige-accent/70 line-clamp-2 font-light">Cottage
+                            cheese cubes marinated in spiced yogurt, capsicum, onion, and charcoal grilled.</p>
+                    </div>
+                    <div
+                        class="mt-4 pt-2.5 border-t border-gold/15 flex items-center justify-between text-xs sm:text-sm">
+                        <span class="text-gold-dark font-semibold text-xs">6 Pcs Portion</span>
+                        <a href="#order-dish-101"
+                            class="text-flash-red font-extrabold hover:underline whitespace-nowrap">Order ➔</a>
+                    </div>
+                </div>
+
+                <div class="dish-card glow-card-container card-gradient-gold rounded-3xl p-4 shadow-sm hover:shadow-xl transition group flex flex-col justify-between"
+                    data-category="mains" data-diet="nonveg">
+                    <div>
+                        <div class="relative h-44 rounded-2xl overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=500&q=80"
+                                alt="Kolkata Biryani" class="w-full h-full object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/30 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-2 left-2 bg-nonveg text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shadow">Non-Veg</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-2 mb-1">
+                            <h3
+                                class="dish-title font-serif font-bold text-base sm:text-lg text-beige-accent group-hover:text-gold-dark transition">
+                                Kolkata Chicken Biryani</h3>
+                            <span
+                                class="font-serif font-extrabold text-base sm:text-lg text-flash-red flex-shrink-0">₹220</span>
+                        </div>
+                        <p class="dish-desc text-xs sm:text-sm text-beige-accent/70 line-clamp-2 font-light">Slow-cooked
+                            basmati rice with juicy chicken, boiled egg, spices, and soft potato.</p>
+                    </div>
+                    <div
+                        class="mt-4 pt-2.5 border-t border-gold/15 flex items-center justify-between text-xs sm:text-sm">
+                        <span class="text-gold-dark font-semibold text-xs">Kolkata Style</span>
+                        <a href="#order-dish-102"
+                            class="text-flash-red font-extrabold hover:underline whitespace-nowrap">Order ➔</a>
+                    </div>
+                </div>
+
+                <div class="dish-card glow-card-container card-gradient-gold rounded-3xl p-4 shadow-sm hover:shadow-xl transition group flex flex-col justify-between"
+                    data-category="chinese" data-diet="veg">
+                    <div>
+                        <div class="relative h-44 rounded-2xl overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=500&q=80"
+                                alt="Schezwan Noodles" class="w-full h-full object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/30 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-2 left-2 bg-veg text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shadow">Pure
+                                Veg</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-2 mb-1">
+                            <h3
+                                class="dish-title font-serif font-bold text-base sm:text-lg text-beige-accent group-hover:text-gold-dark transition">
+                                Schezwan Veg Noodles</h3>
+                            <span
+                                class="font-serif font-extrabold text-base sm:text-lg text-flash-red flex-shrink-0">₹149</span>
+                        </div>
+                        <p class="dish-desc text-xs sm:text-sm text-beige-accent/70 line-clamp-2 font-light">Wok-tossed
+                            noodles in fiery Schezwan sauce with fresh cabbage, carrot, and bell peppers.</p>
+                    </div>
+                    <div
+                        class="mt-4 pt-2.5 border-t border-gold/15 flex items-center justify-between text-xs sm:text-sm">
+                        <span class="text-gold-dark font-semibold text-xs">Spicy Wok</span>
+                        <a href="#order-dish-103"
+                            class="text-flash-red font-extrabold hover:underline whitespace-nowrap">Order ➔</a>
+                    </div>
+                </div>
+
+                <div class="dish-card glow-card-container card-gradient-gold rounded-3xl p-4 shadow-sm hover:shadow-xl transition group flex flex-col justify-between"
+                    data-category="fitness" data-diet="nonveg">
+                    <div>
+                        <div class="relative h-44 rounded-2xl overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80"
+                                alt="Sautéed Chicken Salad" class="w-full h-full object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-beige-accent/30 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute top-2 left-2 bg-gold-dark text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shadow">Fitness</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-2 mb-1">
+                            <h3
+                                class="dish-title font-serif font-bold text-base sm:text-lg text-beige-accent group-hover:text-gold-dark transition">
+                                Sautéed Chicken Salad</h3>
+                            <span
+                                class="font-serif font-extrabold text-base sm:text-lg text-flash-red flex-shrink-0">₹179</span>
+                        </div>
+                        <p class="dish-desc text-xs sm:text-sm text-beige-accent/70 line-clamp-2 font-light">Sautéed
+                            chicken breast, olive oil, bell peppers, fresh lettuce, cucumber, and light dressing.</p>
+                    </div>
+                    <div
+                        class="mt-4 pt-2.5 border-t border-gold/15 flex items-center justify-between text-xs sm:text-sm">
+                        <span class="text-gold-dark font-semibold text-xs">High Protein</span>
+                        <a href="#order-dish-104"
+                            class="text-flash-red font-extrabold hover:underline whitespace-nowrap">Order ➔</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. COMBOS & THALIS SECTION -->
+    <section id="combos" class="py-12 sm:py-16 lg:py-20 bg-beige-mid">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+                <span class="text-gold-dark font-extrabold text-xs sm:text-sm uppercase tracking-widest">Special Dining
+                    Combos</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold mt-1 text-beige-accent">Thalis & Value Meals</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div
+                    class="glow-card-container card-gradient-gold p-6 rounded-3xl shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <span
+                            class="bg-gold/15 text-gold-dark text-xs font-extrabold uppercase px-3 py-1 rounded-full">Mini
+                            Thali</span>
+                        <h3 class="font-serif font-bold text-xl text-gold-dark mt-3">Veg Mini Thali</h3>
+                        <p class="text-xs sm:text-sm text-beige-accent/75 mt-2 font-light leading-relaxed">
+                            Plain Rice, Dal, Bhaja of the Day, Sabji of the Day, Salad, Chutney & Papad.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gold/15 flex items-center justify-between">
+                        <span class="font-serif font-extrabold text-2xl text-flash-red">₹149</span>
+                        <a href="#order-thali-1"
+                            class="gold-btn-gradient text-white font-extrabold text-xs sm:text-sm px-4 py-2 rounded-full transition whitespace-nowrap shadow-sm">Order
+                            Thali</a>
+                    </div>
+                </div>
+
+                <div
+                    class="glow-card-container card-gradient-gold p-6 rounded-3xl shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <span
+                            class="bg-flash-red-light text-flash-red text-xs font-extrabold uppercase px-3 py-1 rounded-full">Mahabhoj
+                            Feast</span>
+                        <h3 class="font-serif font-bold text-xl text-gold-dark mt-3">Mahabhoj Fish & Chicken</h3>
+                        <p class="text-xs sm:text-sm text-beige-accent/75 mt-2 font-light leading-relaxed">
+                            Plain Rice, Dal, Plain Roti, 2 Types Bhaja, Fish Curry, Chicken Kosha, Salad, Chutney, Papad
+                            & Payesh.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gold/15 flex items-center justify-between">
+                        <span class="font-serif font-extrabold text-2xl text-flash-red">₹359</span>
+                        <a href="#order-thali-2"
+                            class="gold-btn-gradient text-white font-extrabold text-xs sm:text-sm px-4 py-2 rounded-full transition whitespace-nowrap shadow-sm">Order
+                            Thali</a>
+                    </div>
+                </div>
+
+                <div
+                    class="glow-card-container card-gradient-gold p-6 rounded-3xl shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <span
+                            class="bg-gold/15 text-gold-dark text-xs font-extrabold uppercase px-3 py-1 rounded-full">Chinese
+                            Station</span>
+                        <h3 class="font-serif font-bold text-xl text-gold-dark mt-3">Non-Veg Chinese Combo</h3>
+                        <p class="text-xs sm:text-sm text-beige-accent/75 mt-2 font-light leading-relaxed">
+                            Hakka Noodles or Veg Fried Rice + Chilli Chicken (4 Pcs) + Chilled Coca-Cola.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gold/15 flex items-center justify-between">
+                        <span class="font-serif font-extrabold text-2xl text-flash-red">₹179</span>
+                        <a href="#order-combo-3"
+                            class="gold-btn-gradient text-white font-extrabold text-xs sm:text-sm px-4 py-2 rounded-full transition whitespace-nowrap shadow-sm">Order
+                            Combo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. REVIEWS SECTION -->
+    <section id="testimonials" class="py-12 sm:py-16 lg:py-20 bg-beige">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+                <span class="text-gold-dark font-extrabold text-xs sm:text-sm uppercase tracking-widest">Customer
+                    Love</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-beige-accent mt-1">What Guests Say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-beige-light p-6 rounded-3xl shadow-sm space-y-3">
+                    <div class="text-gold-bright text-base">⭐⭐⭐⭐⭐</div>
+                    <p class="text-xs sm:text-sm text-beige-accent/80 italic font-light leading-relaxed">
+                        "The Kolkata Chicken Biryani was nostalgic! Perfectly tender chicken and soft potato. Authentic
+                        taste near IIT Indore."
+                    </p>
+                    <div class="pt-2 border-t border-gold/15 text-xs sm:text-sm font-bold text-beige-accent">
+                        — Rohan Sharma <span class="font-normal text-beige-accent/50">(Student)</span>
+                    </div>
+                </div>
+
+                <div class="bg-beige-light p-6 rounded-3xl shadow-sm space-y-3">
+                    <div class="text-gold-bright text-base">⭐⭐⭐⭐⭐</div>
+                    <p class="text-xs sm:text-sm text-beige-accent/80 italic font-light leading-relaxed">
+                        "Mahabhoj Veg Thali is pure value for money. Fresh bhaja and delicious Payesh. Highly
+                        recommended!"
+                    </p>
+                    <div class="pt-2 border-t border-gold/15 text-xs sm:text-sm font-bold text-beige-accent">
+                        — Ananya Das <span class="font-normal text-beige-accent/50">(Local Resident)</span>
+                    </div>
+                </div>
+
+                <div class="bg-beige-light p-6 rounded-3xl shadow-sm space-y-3">
+                    <div class="text-gold-bright text-base">⭐⭐⭐⭐⭐</div>
+                    <p class="text-xs sm:text-sm text-beige-accent/80 italic font-light leading-relaxed">
+                        "Great ambiance and fast service. The Sautéed Chicken Salad in their Fitness menu is a regular
+                        for me post-workout."
+                    </p>
+                    <div class="pt-2 border-t border-gold/15 text-xs sm:text-sm font-bold text-beige-accent">
+                        — Vikram Verma <span class="font-normal text-beige-accent/50">(Fitness Enthusiast)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER WITH CONTINUOUS MARQUEE BAR -->
+    <footer class="bg-beige-accent text-white mt-auto">
+        <!-- Marquee Bar -->
+        <div class="bg-black/20 h-9 sm:h-10 border-b border-gold/15 overflow-hidden flex items-center">
+            <div
+                class="flex whitespace-nowrap animate-marquee-infinite items-center text-xs sm:text-sm text-gold-light">
+                <span class="mx-4 sm:mx-6 flex items-center gap-2">📍 Opposite IIT Indore Gate No - 01, Simrol, Khandwa
+                    Road, MP - 452020</span>
+                <span class="text-gold/30">&bull;</span>
+                <span class="mx-4 sm:mx-6 flex items-center gap-2">🕒 Daily Timings: 12:00 PM &ndash; 4:00 PM &amp; 7:00
+                    PM &ndash; 11:00 PM</span>
+                <span class="text-gold/30">&bull;</span>
+                <span class="mx-4 sm:mx-6 flex items-center gap-2">📞 Direct Phone: +91 98765 43210</span>
+                <span class="text-gold/30">&bull;</span>
+            </div>
+            <div class="flex whitespace-nowrap animate-marquee-infinite items-center text-xs sm:text-sm text-gold-light"
+                aria-hidden="true">
+                <span class="mx-4 sm:mx-6 flex items-center gap-2">📍 Opposite IIT Indore Gate No - 01, Simrol, Khandwa
+                    Road, MP - 452020</span>
+                <span class="text-gold/30">&bull;</span>
+                <span class="mx-4 sm:mx-6 flex items-center gap-2">🕒 Daily Timings: 12:00 PM &ndash; 4:00 PM &amp; 7:00
+                    PM &ndash; 11:00 PM</span>
+                <span class="text-gold/30">&bull;</span>
+                <span class="mx-4 sm:mx-6 flex items-center gap-2">📞 Direct Phone: +91 98765 43210</span>
+                <span class="text-gold/30">&bull;</span>
+            </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+                <!-- Grid 1: Brand & Socials -->
+                <div class="space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <img src="./assets/images/logo.png" alt="The Metro 1984 Logo" class="h-10 w-auto object-contain"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="font-serif font-bold text-xl gold-gradient-text hidden">THE METRO 1984</span>
+                    </a>
+                    <p class="text-xs sm:text-sm text-gold-light/80 leading-relaxed font-light">
+                        Timeless Taste on Track. Serving high quality Indian, Chinese, Tandoori &amp; Fitness Meals
+                        right opposite IIT Indore.
+                    </p>
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="w-8 h-8 rounded-full bg-white/10 hover:bg-gold hover:text-beige-accent flex items-center justify-center text-gold-light transition"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="w-8 h-8 rounded-full bg-white/10 hover:bg-gold hover:text-beige-accent flex items-center justify-center text-gold-light transition"
+                            aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+                            class="w-8 h-8 rounded-full bg-white/10 hover:bg-gold hover:text-beige-accent flex items-center justify-center text-gold-light transition"
+                            aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Grid 2: Quick Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-xs sm:text-sm text-gold-bright uppercase tracking-wider mb-3">
+                        Quick Links</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-gold-light/80 font-light">
+                        <li><a href="index.html" class="hover:text-gold-bright transition">Home</a></li>
+                        <li><a href="#famous" class="hover:text-gold-bright transition">Famous Items</a></li>
+                        <li><a href="#about" class="hover:text-gold-bright transition">About Us</a></li>
+                        <li><a href="#menu" class="hover:text-gold-bright transition">Full Menu</a></li>
+                        <li><a href="#combos" class="hover:text-gold-bright transition">Thalis &amp; Combos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Grid 3: Menu Categories -->
+                <div>
+                    <h4 class="font-serif font-bold text-xs sm:text-sm text-gold-bright uppercase tracking-wider mb-3">
+                        Categories</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-gold-light/80 font-light">
+                        <li><a href="#menu" onclick="typeof filterCategory === 'function' && filterCategory('mains')"
+                                class="hover:text-gold-bright transition">Kolkata Biryani</a></li>
+                        <li><a href="#menu" onclick="typeof filterCategory === 'function' && filterCategory('tandoori')"
+                                class="hover:text-gold-bright transition">Chicken Kebabs</a></li>
+                        <li><a href="#menu" onclick="typeof filterCategory === 'function' && filterCategory('starters')"
+                                class="hover:text-gold-bright transition">Momos &amp; Rolls</a></li>
+                        <li><a href="#menu" onclick="typeof filterCategory === 'function' && filterCategory('fitness')"
+                                class="hover:text-gold-bright transition">Fitness Salads</a></li>
+                    </ul>
+                </div>
+
+                <!-- Grid 4: Location & Map Card -->
+                <div class="space-y-3">
+                    <h4 class="font-serif font-bold text-xs sm:text-sm text-gold-bright uppercase tracking-wider mb-1">
+                        Find Us</h4>
+                    <div class="relative group rounded-lg overflow-hidden border border-white/10 bg-black/30">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=400&q=80"
+                            alt="Restaurant Location Map Preview"
+                            class="w-full h-24 object-cover opacity-60 group-hover:opacity-80 transition duration-300">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center p-2 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                            <a href="https://maps.google.com/?q=Opposite+IIT+Indore+Gate+No+01+Simrol+Khandwa+Road+MP+452020"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 bg-gold hover:bg-gold-bright text-beige-accent font-semibold px-3 py-1.5 rounded text-xs transition shadow-md">
+                                <i class="fa-solid fa-location-dot"></i> Open in Maps
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gold-light/70 font-light leading-snug">Opposite IIT Indore Gate No - 01,
+                        Simrol, MP.</p>
+                </div>
+
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="mt-8 pt-8 lg:pt-10 border-t border-white/10 text-center text-xs text-gold-light/60">
+                &copy; 2026 <a href="index.html" class="hover:text-gold-bright transition">The Metro 1984.</a> All
+                Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- DEDICATED BOOK TABLE MODAL -->
+    <div id="booking-modal"
+        class="fixed inset-0 bg-beige-accent/50 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4"
+        onclick="closeModalOnBackdrop(event, 'booking-modal')">
+        <div class="bg-beige rounded-3xl p-5 sm:p-6 max-w-md w-full space-y-4 shadow-2xl relative">
+            <button onclick="closeBookingModal()"
+                class="absolute top-3 right-3 text-beige-accent p-1 hover:text-gold-dark"
+                aria-label="Close Modal">✕</button>
+
+            <div class="text-center space-y-1">
+                <span class="text-3xl sm:text-4xl block">🍽️</span>
+                <h3 class="font-serif font-bold text-xl sm:text-2xl text-gold-dark">Reserve a Table</h3>
+                <p class="text-xs sm:text-sm text-beige-accent/80 font-light">Book your experience at The Metro 1984</p>
+            </div>
+
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-3 text-xs sm:text-sm">
+                <div>
+                    <label class="block text-beige-accent font-semibold mb-1">Full Name</label>
+                    <input type="text" required placeholder="Enter your full name"
+                        class="w-full bg-beige-light rounded-xl p-2.5 text-beige-accent focus:outline-none shadow-sm">
+                </div>
+                <div>
+                    <label class="block text-beige-accent font-semibold mb-1">Phone Number</label>
+                    <input type="tel" required placeholder="+91 98765 43210"
+                        class="w-full bg-beige-light rounded-xl p-2.5 text-beige-accent focus:outline-none shadow-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-beige-accent font-semibold mb-1">Guests</label>
+                        <select
+                            class="w-full bg-beige-light rounded-xl p-2.5 text-beige-accent focus:outline-none shadow-sm">
+                            <option>2 People</option>
+                            <option>3 - 4 People</option>
+                            <option>5 - 8 People</option>
+                            <option>Large Party (8+)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-beige-accent font-semibold mb-1">Preferred Time</label>
+                        <select
+                            class="w-full bg-beige-light rounded-xl p-2.5 text-beige-accent focus:outline-none shadow-sm">
+                            <option>Lunch (1:00 PM)</option>
+                            <option>Lunch (2:30 PM)</option>
+                            <option>Dinner (8:00 PM)</option>
+                            <option>Dinner (9:30 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full red-btn-gradient text-white font-extrabold py-3 rounded-full text-xs sm:text-sm uppercase tracking-wider transition shadow mt-2">
+                    Confirm Reservation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SURPRISE CRAVING MODAL -->
+    <div id="surprise-modal"
+        class="fixed inset-0 bg-beige-accent/50 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4"
+        onclick="closeModalOnBackdrop(event, 'surprise-modal')">
+        <div class="bg-beige rounded-3xl p-6 max-w-sm w-full text-center space-y-4 shadow-2xl relative">
+            <button onclick="closeSurpriseModal()"
+                class="absolute top-3 right-3 text-beige-accent p-1 hover:text-gold-dark"
+                aria-label="Close Modal">✕</button>
+
+            <span class="text-4xl block">🎰</span>
+            <h3 class="font-serif font-bold text-xl text-gold-dark">Surprise Craving Picker!</h3>
+            <p class="text-xs sm:text-sm text-beige-accent/80 font-light">Can't decide what to order? Try this special
+                recommendation:</p>
+
+            <div class="bg-beige-mid p-4 rounded-2xl text-left space-y-1.5 shadow-inner">
+                <span id="surprise-diet"
+                    class="text-[10px] sm:text-xs font-bold uppercase px-2 py-0.5 rounded-full bg-veg text-white">Pure
+                    Veg</span>
+                <h4 id="surprise-title" class="font-serif font-bold text-base sm:text-lg text-beige-accent">Mahabhoj Veg
+                    Thali</h4>
+                <p id="surprise-desc" class="text-xs sm:text-sm text-beige-accent/70 font-light">Authentic 9-item
+                    Bengali feast with fresh ingredients.</p>
+                <div class="font-serif font-extrabold text-flash-red text-base pt-0.5" id="surprise-price"><i
+                        class="bi bi-currency-rupee"></i>249</div>
+            </div>
+
+            <button onclick="closeSurpriseModal()"
+                class="w-full red-btn-gradient text-white font-extrabold py-3 rounded-full text-xs sm:text-sm uppercase tracking-wider transition shadow">
+                Order This Dish Now!
+            </button>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

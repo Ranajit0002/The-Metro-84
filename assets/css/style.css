@@ -1,0 +1,53 @@
+.gold-gradient-text {
+    background: linear-gradient(135deg, #96691E 0%, #C89B3C 50%, #E5A93C 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gold-btn-gradient {
+    background: linear-gradient(135deg, #C89B3C 0%, #E5A93C 50%, #96691E 100%);
+}
+
+.red-btn-gradient {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 50%, #991B1B 100%);
+}
+
+.card-gradient-gold {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F3E8 100%);
+}
+
+.glow-card-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-card-container::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    background: linear-gradient(90deg, transparent 0%, rgba(229, 169, 60, 0.04) 40%, rgba(245, 227, 179, 0.28) 50%, rgba(229, 169, 60, 0.04) 60%, transparent 100%);
+    transform: rotate(45deg);
+    pointer-events: none;
+    animation: angledGlow 6s infinite ease-in-out;
+    z-index: 10;
+}
+
+.marquee-wrapper:hover .marquee-inner {
+    animation-play-state: paused;
+}
+
+.drawer-slide {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
